@@ -1,11 +1,14 @@
+
+<div style={{maxWidth: '800px', margin: '0 auto'}}>
 ## Get in touch
 
 Interested in my services? Fill out this form with a description of what you are looking for, and I will get back to you.
 
 
 
-<form netlify="true" style={{ display: 'flex', flexDirection: 'column'}}>
-    <input placeholder="Your email" type="email"></input>
-    <textarea rows="5" placeholder="Briefly describe your project needs"></textarea>
+<form data-netlify="true" name="contact-form" method="POST" style={{ display: 'flex', flexDirection: 'column'}}>
+    <input placeholder="Your email" type="email" name="email"></input>
+    <textarea rows="5" placeholder="Briefly describe your project needs" name="description"></textarea>
     <input type="submit" value="Inquire" style={{ background: "linear-gradient(to right, #D4145A 0%, #FBB03B 100%)", color: "#fff"}}></input>
 </form>
+</div>
