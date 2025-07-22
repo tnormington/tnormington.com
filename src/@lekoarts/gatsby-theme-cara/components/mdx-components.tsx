@@ -1,5 +1,6 @@
 import * as React from "react"
 import ProjectCard from "./project-card"
+import ContactForm from "./contact-form"
 
 const MdxComponents = {
   ProjectCard: ({ link, title, bg, color, children, ...props }: any) => (
@@ -7,6 +8,7 @@ const MdxComponents = {
       {children}
     </ProjectCard>
   ),
+  ContactForm: () => <ContactForm />
 }
 
 export default MdxComponents
