@@ -88,6 +88,24 @@ const theme = merge(tailwind, {
         border:'none',
         borderRadius: '4px',
       },
+      '.about-wrapper': {
+        display: 'flex',
+        maxWidth: '1000px',
+        margin: '0 auto',
+        alignItems: 'flex-start',
+        flexWrap: ['wrap', 'wrap', 'wrap', 'nowrap']
+      },
+      '.about-portrait-wrapper': {
+        flex: '1 0 auto',
+        display: 'flex',
+        alignItems: 'center'
+      },
+      '.about-portrait-wrapper img': {
+        maxWidth: '300px',
+        margin: ['0 auto', null, null, '0 2rem 0 0'],
+        borderRadius: '50%',
+        boxShadow: '0 3px 24px rgba(0, 0, 0, 0.25)'
+      }
     },
     p: {
       fontSize: [1, 2],
