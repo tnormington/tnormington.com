@@ -23,6 +23,8 @@ const Projects = ({ offset, factor = 2 }: { offset: number; factor?: number }) =
             display: `grid`,
             gridGap: [4, 4, 4, 5],
             gridTemplateColumns: [`1fr`, `1fr`, `repeat(2, 1fr)`, `repeat(3, 1fr)`],
+            maxWidth: `1400px`,
+            margin: `0 auto`,
             h2: { gridColumn: `-1/1`, color: `white !important` },
           }}
         >
