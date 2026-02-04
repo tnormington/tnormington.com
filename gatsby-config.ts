@@ -50,6 +50,7 @@ const config: GatsbyConfig = {
         ],
       },
       
+      
     },
     {
       resolve: `gatsby-plugin-google-gtag`,
