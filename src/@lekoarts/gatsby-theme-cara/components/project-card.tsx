@@ -6,9 +6,21 @@ type ProjectCardProps = {
   title: string
   children: React.ReactNode
   image?: string
+  category?: "Website" | "App"
 }
 
-const ProjectCard = ({ link, title, children, image }: ProjectCardProps) => (
+const categoryStyles = {
+  Website: {
+    bg: `linear-gradient(135deg, #667eea 0%, #764ba2 100%)`,
+    shadow: `rgba(102, 126, 234, 0.3)`,
+  },
+  App: {
+    bg: `linear-gradient(135deg, #f093fb 0%, #f5576c 100%)`,
+    shadow: `rgba(245, 87, 108, 0.3)`,
+  },
+}
+
+const ProjectCard = ({ link, title, children, image, category }: ProjectCardProps) => (
   <a
     href={link}
     target="_blank"
@@ -62,8 +74,8 @@ const ProjectCard = ({ link, title, children, image }: ProjectCardProps) => (
     )}
     <div
       sx={{
-        px: [4, 4],
-        py: [4, 4],
+        px: [3, 3],
+        py: [3, 3],
         display: `flex`,
         flexDirection: `column`,
         justifyContent: `space-between`,
@@ -112,6 +124,43 @@ const ProjectCard = ({ link, title, children, image }: ProjectCardProps) => (
             <polyline points="7 7 17 7 17 17" />
           </svg>
         </div>
+        {category && (
+          <span
+            sx={{
+              display: `inline-flex`,
+              alignItems: `center`,
+              alignSelf: `flex-start`,
+              gap: `4px`,
+              fontSize: `11px`,
+              fontWeight: 700,
+              letterSpacing: `0.04em`,
+              textTransform: `uppercase`,
+              color: `#fff`,
+              background: categoryStyles[category].bg,
+              px: `8px`,
+              py: `3px`,
+              borderRadius: `20px`,
+              whiteSpace: `nowrap`,
+              boxShadow: `0 2px 8px ${categoryStyles[category].shadow}`,
+              mt: 1,
+              mb: 2
+            }}
+          >
+            {category === "App" ? (
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                <line x1="12" y1="18" x2="12.01" y2="18" />
+              </svg>
+            ) : (
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+              </svg>
+            )}
+            {category}
+          </span>
+        )}
       </div>
       <div
         sx={{
