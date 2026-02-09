@@ -56,7 +56,10 @@ const ContactForm = () => (
       style={{ display: 'flex', flexDirection: 'column'}}
     >
       <input type="hidden" name="form-name" value="contact-form" />
-      <input placeholder="Your email" type="email" name="email" />
+      <label style={{ display: 'flex', alignItems: 'center', gap: '4px', marginBottom: '4px', fontSize: '0.85rem', color: 'rgba(255,255,255,0.8)' }}>
+        Email <span style={{ color: '#FBB03B' }}>*</span>
+      </label>
+      <input placeholder="Your email" type="email" name="email" required />
       <textarea rows={5} placeholder="Briefly describe your project needs" name="description" />
       <button type="submit" className="inquire-btn">Inquire</button>
     </form>
