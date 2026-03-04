@@ -88,6 +88,25 @@ const theme = merge(tailwind, {
         border:'none',
         borderRadius: '4px',
       },
+      '.hero-wrapper': {
+        display: 'flex',
+        alignItems: 'center',
+        gap: '2rem',
+        flexDirection: ['column', 'column', 'row'],
+      },
+      '.hero-portrait': {
+        flexShrink: 0,
+      },
+      '.hero-portrait img': {
+        width: ['150px', '180px', '200px'],
+        height: ['150px', '180px', '200px'],
+        borderRadius: '50%',
+        objectFit: 'cover',
+        boxShadow: '0 3px 24px rgba(0, 0, 0, 0.25)',
+      },
+      '.hero-text': {
+        flex: 1,
+      },
       '.about-wrapper': {
         display: 'flex',
         maxWidth: '1000px',
