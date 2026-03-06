@@ -6,7 +6,7 @@ type ProjectCardProps = {
   title: string
   children: React.ReactNode
   image?: string
-  category?: "Website" | "App"
+  category?: "Website" | "App" | "Plugin"
 }
 
 const categoryStyles = {
@@ -17,6 +17,10 @@ const categoryStyles = {
   App: {
     bg: `linear-gradient(135deg, #f093fb 0%, #f5576c 100%)`,
     shadow: `rgba(245, 87, 108, 0.3)`,
+  },
+  Plugin: {
+    bg: `linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)`,
+    shadow: `rgba(67, 233, 123, 0.3)`,
   },
 }
 
@@ -150,6 +154,10 @@ const ProjectCard = ({ link, title, children, image, category }: ProjectCardProp
               <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
                 <line x1="12" y1="18" x2="12.01" y2="18" />
+              </svg>
+            ) : category === "Plugin" ? (
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 2v6m0 0a3 3 0 1 0 0 6m0-6a3 3 0 1 1 0 6m0 0v4m-4-4H4m16 0h-4" />
               </svg>
             ) : (
               <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
