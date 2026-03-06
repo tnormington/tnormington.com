@@ -6,7 +6,7 @@ type ProjectCardProps = {
   title: string
   children: React.ReactNode
   image?: string
-  category?: "Website" | "App" | "Plugin"
+  category?: "Website" | "App" | "Plugin" | "Service"
 }
 
 const categoryStyles = {
@@ -21,6 +21,10 @@ const categoryStyles = {
   Plugin: {
     bg: `linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)`,
     shadow: `rgba(67, 233, 123, 0.3)`,
+  },
+  Service: {
+    bg: `linear-gradient(135deg, #a78bfa 0%, #6366f1 100%)`,
+    shadow: `rgba(99, 102, 241, 0.3)`,
   },
 }
 
@@ -158,6 +162,10 @@ const ProjectCard = ({ link, title, children, image, category }: ProjectCardProp
             ) : category === "Plugin" ? (
               <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M12 2v6m0 0a3 3 0 1 0 0 6m0-6a3 3 0 1 1 0 6m0 0v4m-4-4H4m16 0h-4" />
+              </svg>
+            ) : category === "Service" ? (
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
               </svg>
             ) : (
               <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
