@@ -26,7 +26,7 @@ const Projects = ({ offset, factor = 2 }: { offset: number; factor?: number }) =
             maxWidth: `1400px`,
             margin: `0 auto`,
             "> h2": { gridColumn: `-1/1`, color: `white !important` },
-            "> h3": { gridColumn: `-1/1`, color: `white !important`, fontSize: [2, 3], fontWeight: 600, opacity: 0.85, mt: 2, mb: -2 },
+            "> h3": { gridColumn: `-1/1`, color: `white !important`, fontSize: [5, 6], fontWeight: 600, opacity: 0.85, mt: 2, mb: -2 },
           }}
         >
           <ProjectsMDX />
