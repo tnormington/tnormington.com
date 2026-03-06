@@ -7,7 +7,6 @@ type ServiceCardProps = {
   subject: string
   children: React.ReactNode
   icon: "code" | "brain" | "palette"
-  featured?: boolean
 }
 
 const iconMap = {
@@ -36,11 +35,11 @@ const iconMap = {
   ),
 }
 
-const ServiceCard = ({ title, email, subject, children, icon, featured }: ServiceCardProps) => (
+const ServiceCard = ({ title, email, subject, children, icon }: ServiceCardProps) => (
   <div
     sx={{
       background: `white`,
-      border: featured ? `2px solid #6366f1` : `2px solid #e5e7eb`,
+      border: `2px solid #e5e7eb`,
       borderRadius: `16px`,
       padding: [`24px`, `32px`],
       display: `flex`,
@@ -48,40 +47,13 @@ const ServiceCard = ({ title, email, subject, children, icon, featured }: Servic
       position: `relative`,
       overflow: `visible`,
       transition: `all 0.3s ease`,
-      boxShadow: featured
-        ? `0 4px 20px rgba(99, 102, 241, 0.15)`
-        : `0 2px 8px rgba(0, 0, 0, 0.06)`,
+      boxShadow: `0 2px 8px rgba(0, 0, 0, 0.06)`,
       "&:hover": {
         transform: `translateY(-4px)`,
-        boxShadow: featured
-          ? `0 12px 32px rgba(99, 102, 241, 0.2)`
-          : `0 8px 24px rgba(0, 0, 0, 0.1)`,
+        boxShadow: `0 8px 24px rgba(0, 0, 0, 0.1)`,
       },
     }}
   >
-    {featured && (
-      <span
-        sx={{
-          position: `absolute`,
-          top: `-12px`,
-          left: `50%`,
-          transform: `translateX(-50%)`,
-          background: `linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)`,
-          color: `white`,
-          fontSize: `11px`,
-          fontWeight: 700,
-          letterSpacing: `0.05em`,
-          textTransform: `uppercase`,
-          px: `14px`,
-          py: `4px`,
-          borderRadius: `20px`,
-          whiteSpace: `nowrap`,
-        }}
-      >
-        Most Popular
-      </span>
-    )}
-
     <div
       sx={{
         display: `flex`,
@@ -98,10 +70,8 @@ const ServiceCard = ({ title, email, subject, children, icon, featured }: Servic
           display: `flex`,
           alignItems: `center`,
           justifyContent: `center`,
-          background: featured
-            ? `linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)`
-            : `linear-gradient(135deg, #f0f0ff 0%, #e8e8ff 100%)`,
-          color: featured ? `white` : `#6366f1`,
+          background: `linear-gradient(135deg, #f0f0ff 0%, #e8e8ff 100%)`,
+          color: `#6366f1`,
           flexShrink: 0,
         }}
       >
@@ -111,7 +81,7 @@ const ServiceCard = ({ title, email, subject, children, icon, featured }: Servic
         sx={{
           fontSize: [`18px`, `20px`],
           fontWeight: 700,
-          color: `#1a1a2e`,
+          color: `#1a1a2e !important`,
           margin: 0,
           lineHeight: 1.3,
         }}
@@ -142,11 +112,9 @@ const ServiceCard = ({ title, email, subject, children, icon, featured }: Servic
         alignItems: `center`,
         justifyContent: `center`,
         gap: `8px`,
-        background: featured
-          ? `linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)`
-          : `white`,
-        color: featured ? `white` : `#6366f1`,
-        border: featured ? `none` : `2px solid #6366f1`,
+        background: `white`,
+        color: `#6366f1`,
+        border: `2px solid #6366f1`,
         borderRadius: `10px`,
         padding: `12px 24px`,
         fontSize: `15px`,
@@ -155,9 +123,7 @@ const ServiceCard = ({ title, email, subject, children, icon, featured }: Servic
         transition: `all 0.2s ease`,
         cursor: `pointer`,
         "&:hover": {
-          background: featured
-            ? `linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%)`
-            : `#6366f1`,
+          background: `#6366f1`,
           color: `white !important`,
           transform: `translateY(-1px)`,
           boxShadow: `0 4px 12px rgba(99, 102, 241, 0.3)`,
