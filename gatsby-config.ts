@@ -11,7 +11,7 @@ const config: GatsbyConfig = {
     siteTitle: `Tim Normington | Web Developer`,
     siteTitleAlt: `Tim Normington | Web Developer`,
     siteHeadline: `Building modern, affordable, and reliable websites for any situation.`,
-    siteUrl: `https://tjn.dev`,
+    siteUrl: `https://tnormington.com`,
     siteDescription: `Building modern, affordable, and reliable websites for any situation.`,
     siteImage: `/banner.jpg`,
     siteLanguage: `en`,
@@ -83,6 +83,7 @@ const config: GatsbyConfig = {
         },
       },
     },
+    `gatsby-plugin-sitemap`,
     // You can remove this plugin if you don't need it
     shouldAnalyseBundle && {
       resolve: `gatsby-plugin-webpack-statoscope`,
