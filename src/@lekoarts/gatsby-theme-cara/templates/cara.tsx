@@ -16,11 +16,11 @@ import Seo from "@lekoarts/gatsby-theme-cara/src/components/seo"
 
 const Cara = () => (
   <Layout>
-    <Parallax pages={5.5}>
-      <Hero offset={0} factor={1.5} />
-      <Projects offset={1.5} factor={2} />
-      <About offset={3.5} factor={1} />
-      <Contact offset={4.5} factor={1} />
+    <Parallax pages={5}>
+      <Hero offset={0} factor={1.2} />
+      <Projects offset={1.2} factor={2} />
+      <About offset={3.2} factor={1} />
+      <Contact offset={4.2} factor={1} />
     </Parallax>
   </Layout>
 )
