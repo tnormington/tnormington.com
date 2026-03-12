@@ -90,16 +90,16 @@ const theme = merge(tailwind, {
       },
       '.hero-wrapper': {
         display: 'flex',
-        alignItems: 'center',
-        gap: '2rem',
-        flexDirection: ['column', 'column', 'row'],
+        alignItems: 'flex-start',
+        gap: '1.25rem',
+        flexDirection: 'column',
       },
       '.hero-portrait': {
         flexShrink: 0,
       },
       '.hero-portrait img': {
-        width: ['150px', '180px', '200px'],
-        height: ['150px', '180px', '200px'],
+        width: ['120px', '150px', '160px'],
+        height: ['120px', '150px', '160px'],
         borderRadius: '50%',
         objectFit: 'cover',
         boxShadow: '0 3px 24px rgba(0, 0, 0, 0.25)',
