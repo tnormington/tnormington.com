@@ -90,9 +90,11 @@ const theme = merge(tailwind, {
       },
       '.hero-wrapper': {
         display: 'flex',
-        alignItems: 'flex-start',
+        alignItems: 'center',
+        justifyContent: 'center',
         gap: '1.25rem',
         flexDirection: 'column',
+        textAlign: 'center',
       },
       '.hero-portrait': {
         flexShrink: 0,
@@ -106,6 +108,7 @@ const theme = merge(tailwind, {
       },
       '.hero-text': {
         flex: 1,
+        textAlign: 'center',
       },
       '.about-wrapper': {
         display: 'flex',
