@@ -42,8 +42,7 @@ const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
       <Svg icon="hexa" width={16} stroke color="icon_darker" left="10%" top="50%" />
       <Svg icon="hexa" width={8} stroke color="icon_darker" left="80%" top="70%" />
     </Divider>
-    {/* Content uses factor=1 so hero is centered in 1 viewport height */}
-    <Content sx={{ variant: `texts.bigger` }} speed={0.4} offset={offset} factor={1}>
+    <Content sx={{ variant: `texts.bigger` }} speed={0.4} offset={offset} factor={factor}>
       <Inner>
         <Intro />
       </Inner>
