@@ -42,7 +42,7 @@ const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
       <Svg icon="hexa" width={16} stroke color="icon_darker" left="10%" top="50%" />
       <Svg icon="hexa" width={8} stroke color="icon_darker" left="80%" top="70%" />
     </Divider>
-    <Content sx={{ variant: `texts.bigger`, justifyContent: `flex-start`, pt: [3, 4, `20vh`] }} speed={0.4} offset={offset} factor={factor}>
+    <Content sx={{ variant: `texts.bigger`, justifyContent: `flex-start`, pt: [3, 4, `12vh`] }} speed={1} offset={offset} factor={factor}>
       <Inner>
         <Intro />
       </Inner>
