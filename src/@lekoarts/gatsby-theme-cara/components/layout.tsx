@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import * as React from "react"
-import { jsx, get } from "theme-ui"
+import { jsx, get, useColorMode } from "theme-ui"
 import { Link } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { Global } from "@emotion/react"
@@ -8,7 +8,11 @@ import MdxComponents from "./mdx-components"
 
 type LayoutProps = { children: React.ReactNode; className?: string }
 
-const Layout = ({ children, className = `` }: LayoutProps) => (
+const Layout = ({ children, className = `` }: LayoutProps) => {
+  const [colorMode, setColorMode] = useColorMode<"light" | "dark">()
+  const isDark = colorMode === `dark`
+
+  return (
   <React.Fragment>
     <Global
       styles={(t) => ({
@@ -31,6 +35,52 @@ const Layout = ({ children, className = `` }: LayoutProps) => (
       })}
     />
     <MDXProvider components={MdxComponents}>
+      {/* Theme toggle - top left */}
+      <button
+        onClick={() => {
+          const next = isDark ? `light` : `dark`
+          setColorMode(next)
+          document.documentElement.classList.value = `theme-ui-${next}`
+        }}
+        type="button"
+        aria-label={isDark ? `Activate Light Mode` : `Activate Dark Mode`}
+        sx={{
+          position: `fixed`,
+          top: [3, 4],
+          left: [3, 4],
+          zIndex: 100,
+          background: `none`,
+          border: `none`,
+          cursor: `pointer`,
+          color: `text`,
+          opacity: 0.7,
+          transition: `all 0.2s ease`,
+          padding: 0,
+          lineHeight: 1,
+          "&:hover": {
+            opacity: 1,
+            color: `primary`,
+          },
+        }}
+      >
+        {isDark ? (
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+        ) : (
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        )}
+      </button>
       {/* Fixed icon links in top right */}
       <div
         sx={{
@@ -157,6 +207,7 @@ const Layout = ({ children, className = `` }: LayoutProps) => (
       <main className={className}>{children}</main>
     </MDXProvider>
   </React.Fragment>
-)
+  )
+}
 
 export default Layout

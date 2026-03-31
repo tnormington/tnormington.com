@@ -19,12 +19,10 @@ import ProjectsMDX from "../sections/projects.mdx"
 import AboutMDX from "../sections/about.mdx"
 import ContactMDX from "../sections/contact.mdx"
 
-const PAGES = 5
-
 const Cara = () => (
   <Layout>
-    <Parallax pages={PAGES}>
-      {/* ── Background decorations (parallax) ── */}
+    <Parallax pages={4}>
+      {/* ── Background decorations ── */}
 
       {/* Hero background */}
       <ParallaxLayer offset={0} factor={1} speed={0.2} sx={{ position: `absolute`, width: `full`, height: `full` }}>
@@ -58,7 +56,7 @@ const Cara = () => (
 
       {/* Projects gradient background */}
       <ParallaxLayer
-        offset={1.1}
+        offset={1}
         factor={2}
         speed={-0.2}
         sx={{
@@ -96,7 +94,7 @@ const Cara = () => (
 
       {/* About background */}
       <ParallaxLayer
-        offset={3}
+        offset={2.5}
         factor={1}
         speed={0.2}
         sx={{
@@ -108,7 +106,7 @@ const Cara = () => (
           clipPath: `polygon(0 16%, 100% 4%, 100% 82%, 0 94%)`,
         }}
       />
-      <ParallaxLayer offset={3} factor={1} speed={0.1} sx={{ position: `absolute`, width: `full`, height: `full` }}>
+      <ParallaxLayer offset={2.5} factor={1} speed={0.1} sx={{ position: `absolute`, width: `full`, height: `full` }}>
         <UpDown>
           <Svg icon="box" hiddenMobile width={6} color="icon_blue" left="50%" top="75%" />
           <Svg icon="upDown" hiddenMobile width={8} color="icon_darkest" left="70%" top="20%" />
@@ -129,7 +127,7 @@ const Cara = () => (
       </ParallaxLayer>
 
       {/* Contact background */}
-      <ParallaxLayer offset={4} factor={1} speed={0.2} sx={{ position: `absolute`, width: `full`, height: `full` }}>
+      <ParallaxLayer offset={3} factor={1} speed={0.2} sx={{ position: `absolute`, width: `full`, height: `full` }}>
         <div sx={{ position: `absolute`, bottom: 0, width: `full`, transform: `matrix(1, 0, 0, -1, 0, 0)` }}>
           <div
             sx={{
@@ -152,7 +150,7 @@ const Cara = () => (
           </div>
         </div>
       </ParallaxLayer>
-      <ParallaxLayer offset={4} factor={1} speed={0.1} sx={{ position: `absolute`, width: `full`, height: `full` }}>
+      <ParallaxLayer offset={3} factor={1} speed={0.1} sx={{ position: `absolute`, width: `full`, height: `full` }}>
         <UpDown>
           <Svg icon="upDown" hiddenMobile width={8} color="icon_darkest" left="70%" top="20%" />
           <Svg icon="triangle" width={8} stroke color="icon_darkest" left="25%" top="5%" />
@@ -168,40 +166,32 @@ const Cara = () => (
         <Svg icon="hexa" width={8} stroke color="icon_darkest" left="80%" top="70%" />
       </ParallaxLayer>
 
-      {/* ── All content in a single normal-flow layer ── */}
-      <ParallaxLayer
-        offset={0}
-        factor={PAGES}
-        speed={1}
-        sx={{
-          zIndex: 50,
-          display: `flex`,
-          flexDirection: `column`,
-          pointerEvents: `none`,
-          "& > *": { pointerEvents: `auto` },
-        }}
-      >
-        {/* Hero */}
-        <section
+      {/* ── Content sections ── */}
+
+      {/* Hero content */}
+      <ParallaxLayer offset={0} factor={1} speed={0.8} sx={{ zIndex: 50, display: `flex`, alignItems: `center`, justifyContent: `center` }}>
+        <div
           sx={{
             variant: `texts.bigger`,
             display: `flex`,
             flexDirection: `column`,
             alignItems: `center`,
             justifyContent: `flex-start`,
-            pt: [3, 4, `12vh`],
+            pt: [`96px`, 4, `12vh`],
             pb: [4, 4, 5],
             px: [3, 4, 4, 5],
-            minHeight: [`auto`, `auto`, `60vh`],
+            width: `full`,
           }}
         >
           <Inner>
             <Intro />
           </Inner>
-        </section>
+        </div>
+      </ParallaxLayer>
 
-        {/* Projects */}
-        <section
+      {/* Projects content */}
+      <ParallaxLayer offset={1} factor={2} speed={0.8} sx={{ zIndex: 50 }}>
+        <div
           sx={{
             display: `flex`,
             flexDirection: `column`,
@@ -225,10 +215,12 @@ const Cara = () => (
               <ProjectsMDX />
             </div>
           </Inner>
-        </section>
+        </div>
+      </ParallaxLayer>
 
-        {/* About */}
-        <section
+      {/* About content */}
+      <ParallaxLayer offset={2.5} factor={1} speed={0.8} sx={{ zIndex: 50 }}>
+        <div
           sx={{
             display: `flex`,
             flexDirection: `column`,
@@ -240,10 +232,12 @@ const Cara = () => (
           <Inner>
             <AboutMDX />
           </Inner>
-        </section>
+        </div>
+      </ParallaxLayer>
 
-        {/* Contact */}
-        <section
+      {/* Contact content */}
+      <ParallaxLayer offset={3} factor={1} speed={0.8} sx={{ zIndex: 50 }}>
+        <div
           sx={{
             display: `flex`,
             flexDirection: `column`,
@@ -256,7 +250,7 @@ const Cara = () => (
             <ContactMDX />
           </Inner>
           <Footer />
-        </section>
+        </div>
       </ParallaxLayer>
     </Parallax>
   </Layout>
