@@ -21,7 +21,18 @@ const BlogLayout = ({ children }: BlogLayoutProps) => (
     >
       {children}
     </div>
-    <div sx={{ maxWidth: `780px`, mx: `auto`, px: [3, 4], pb: 4 }}>
+    <div
+      sx={{
+        maxWidth: `780px`,
+        mx: `auto`,
+        px: [3, 4],
+        pb: 4,
+        "& footer": {
+          position: `relative`,
+          bottom: `auto`,
+        },
+      }}
+    >
       <Footer />
     </div>
   </Layout>
