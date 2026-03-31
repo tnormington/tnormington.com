@@ -25,6 +25,13 @@ const config: GatsbyConfig = {
       options: {},
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog`,
+        path: `${__dirname}/content/blog`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Tim Normington | Web Developer`,

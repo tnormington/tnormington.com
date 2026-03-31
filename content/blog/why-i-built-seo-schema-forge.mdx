@@ -1,0 +1,48 @@
+---
+title: "Why I Built SEO Schema Forge"
+slug: "why-i-built-seo-schema-forge"
+date: "2026-03-30"
+description: "The story behind building a WordPress plugin that makes structured data simple for every site owner, and why AI search changes everything."
+---
+
+Something shifted in search over the last year. ChatGPT started answering questions directly. Perplexity built an entire product around it. Google rolled out AI Overviews. The question small business owners started asking changed. It wasn't "how do I rank on page one?" anymore. It was "how do I show up when AI answers the question?"
+
+I've been building for the web for over a decade. My day job is lead front-end developer at Omnia Digital Solutions, where I've been since 2015. But I've always had side projects going. I like making things. Code, woodworking, sketching, guitar. If I can build it, I probably will. So when I started seeing this gap between what business owners needed and what was actually available to them, I started building.
+
+## The Problem With Most WordPress Plugins
+
+You go looking for a plugin to solve one specific problem and you end up with a Swiss Army knife that includes fourteen tools you'll never touch. Every one of those tools comes with CSS files, JavaScript files, and database queries that slow your site down whether you use them or not.
+
+I'm a front-end performance guy. I spend my working hours optimizing load times, trimming render-blocking resources, making sites faster. Then I install a plugin and watch it dump 200KB of assets onto every page.
+
+So when I decided to build a schema markup plugin, I knew what it wasn't going to be. It wasn't going to load assets on the front end at all. JSON-LD structured data goes right into the page head as a script tag. There's no reason to enqueue stylesheets or JavaScript libraries for that. Zero front-end footprint. Non-negotiable.
+
+## AI SEO Shouldn't Be Complicated
+
+Structured data has been around for years, but for most WordPress site owners it's always felt like something only developers deal with. Hand-write JSON-LD, or trust some massive SEO suite to generate it for you along with everything else you didn't ask for. Those were your options.
+
+With AI search pulling from structured data more than ever, this isn't optional anymore. If your local business doesn't have proper schema markup, you're invisible to these systems. Not less visible. Invisible.
+
+Most business owners don't know what JSON-LD is. They don't know what a schema type is. They shouldn't have to. Fill out your business name, address, hours, services. The right markup gets generated. Done.
+
+I wanted to make the whole process feel trivial. Five minutes, tops. You fill in your info, save, and the correct structured data is on your site. No documentation. No developer. No guessing.
+
+## Simplicity Is the Feature
+
+I'm proud of how the admin interface turned out. Clean settings page. Pick your business type, enter your details, done. Someone who's never touched code can set this up. Someone who's been building WordPress sites for fifteen years can also set it up without feeling like the plugin is talking down to them.
+
+That balance is hard to get right. Most plugin developers don't try. They either build for beginners and annoy experienced users with hand-holding, or build for developers and leave everyone else confused. I wanted SEO Schema Forge to just feel obvious. Open it, you know what to do.
+
+The free version covers LocalBusiness and FAQ schema, which handles the basics for most small businesses. Pro adds over 130 specific business subtypes (so you're marking up your site as a Dentist, not just a generic LocalBusiness), Service schema for individual service pages, and multi-location support. $29 a year.
+
+## Why This, Why Now
+
+I built this to sell. I'll say that plainly. I saw a real market. Business owners are actively searching for how to show up in AI results, and the existing solutions are either overkill or half-baked.
+
+But it's not just about the money. I have two kids, Jack and Hazel, five and three. Time matters. Every side project I take on has to be worth the hours I'm not spending with them. This one felt worth it because it sits right where what I'm good at (front-end performance, WordPress development) meets what people actually need right now.
+
+I'm not trying to build the next Yoast. I want a focused tool that does one thing well, runs clean, and helps people show up where search is heading.
+
+## Try It
+
+If you run a local business on WordPress, or you build sites for clients who do, [SEO Schema Forge is free on WordPress.org](https://wordpress.org/plugins/seo-schema-forge/). Set it up in a few minutes, check your markup with Google's Rich Results Test. The [Pro version](https://products.tnormington.com/seo-schema-forge/) is there when you need the advanced stuff.
