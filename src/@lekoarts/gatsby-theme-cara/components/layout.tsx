@@ -49,16 +49,25 @@ const Layout = ({ children, className = `` }: LayoutProps) => (
             color: `text`,
             opacity: 0.7,
             transition: `all 0.2s ease`,
-            fontSize: 1,
-            fontWeight: `medium`,
-            textDecoration: `none`,
             "&:hover": {
               opacity: 1,
               color: `primary`,
             },
           }}
         >
-          Blog
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
+          </svg>
         </Link>
         <a
           href="https://github.com/tnormington"
