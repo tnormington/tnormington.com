@@ -1,9 +1,11 @@
 import type { GatsbyConfig, PluginRef } from "gatsby"
 import "dotenv/config"
+import adapter from "gatsby-adapter-netlify"
 
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
 const config: GatsbyConfig = {
+  adapter: adapter(),
   siteMetadata: {
     // You can overwrite values here that are used for the SEO component
     // You can also add new values here to query them like usual
