@@ -21,7 +21,7 @@ import ContactMDX from "../sections/contact.mdx"
 
 const Cara = () => (
   <Layout>
-    <Parallax pages={4}>
+    <Parallax pages={5}>
       {/* ── Background decorations ── */}
 
       {/* Hero background */}
@@ -94,7 +94,7 @@ const Cara = () => (
 
       {/* About background */}
       <ParallaxLayer
-        offset={2.5}
+        offset={3}
         factor={1}
         speed={0.2}
         sx={{
@@ -106,7 +106,7 @@ const Cara = () => (
           clipPath: `polygon(0 16%, 100% 4%, 100% 82%, 0 94%)`,
         }}
       />
-      <ParallaxLayer offset={2.5} factor={1} speed={0.1} sx={{ position: `absolute`, width: `full`, height: `full` }}>
+      <ParallaxLayer offset={3} factor={1} speed={0.1} sx={{ position: `absolute`, width: `full`, height: `full` }}>
         <UpDown>
           <Svg icon="box" hiddenMobile width={6} color="icon_blue" left="50%" top="75%" />
           <Svg icon="upDown" hiddenMobile width={8} color="icon_darkest" left="70%" top="20%" />
@@ -127,7 +127,7 @@ const Cara = () => (
       </ParallaxLayer>
 
       {/* Contact background */}
-      <ParallaxLayer offset={3} factor={1} speed={0.2} sx={{ position: `absolute`, width: `full`, height: `full` }}>
+      <ParallaxLayer offset={4} factor={1} speed={0.2} sx={{ position: `absolute`, width: `full`, height: `full` }}>
         <div sx={{ position: `absolute`, bottom: 0, width: `full`, transform: `matrix(1, 0, 0, -1, 0, 0)` }}>
           <div
             sx={{
@@ -150,7 +150,7 @@ const Cara = () => (
           </div>
         </div>
       </ParallaxLayer>
-      <ParallaxLayer offset={3} factor={1} speed={0.1} sx={{ position: `absolute`, width: `full`, height: `full` }}>
+      <ParallaxLayer offset={4} factor={1} speed={0.1} sx={{ position: `absolute`, width: `full`, height: `full` }}>
         <UpDown>
           <Svg icon="upDown" hiddenMobile width={8} color="icon_darkest" left="70%" top="20%" />
           <Svg icon="triangle" width={8} stroke color="icon_darkest" left="25%" top="5%" />
@@ -219,7 +219,7 @@ const Cara = () => (
       </ParallaxLayer>
 
       {/* About content */}
-      <ParallaxLayer offset={2.5} factor={1} speed={0.8} sx={{ zIndex: 50 }}>
+      <ParallaxLayer offset={3} factor={1} speed={0.8} sx={{ zIndex: 50 }}>
         <div
           sx={{
             display: `flex`,
@@ -236,7 +236,7 @@ const Cara = () => (
       </ParallaxLayer>
 
       {/* Contact content */}
-      <ParallaxLayer offset={3} factor={1} speed={0.8} sx={{ zIndex: 50 }}>
+      <ParallaxLayer offset={4} factor={1} speed={0.8} sx={{ zIndex: 50 }}>
         <div
           sx={{
             display: `flex`,
